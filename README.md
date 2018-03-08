@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # Source data of the paper for journal
 
 ## Version: 1.1 Lite
@@ -24,11 +22,3 @@
 ## Feature Selection
 ## Estimation of Features
 ## Discussion and Conclusion
-=======
-# For article
-## Version 1.1
->>>>>>> 3f77bf0d61b4cbad1b459c7e3c1581d44b96c3ba
-=======
-# For article
-## Version 1.1
->>>>>>> 3f77bf0d61b4cbad1b459c7e3c1581d44b96c3ba
