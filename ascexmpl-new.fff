@@ -1,0 +1,50 @@
+\begin{figure}[htp]
+    \caption{Distribution of Transit Stations}
+    \label{fig:1}
+    \centering
+    \fbox{\includegraphics[width=1\linewidth]{fig1}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[htp]
+    \caption{Process of Data Cleaning}
+    \label{fig:2}
+    \centering
+    \fbox{\includegraphics[width=1\linewidth]{fig2}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[htp]
+    \caption{The Age Distribution of Passengers}
+    \label{fig:3}
+    \centering
+    \fbox{\includegraphics[width=1\linewidth]{fig3}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[htp]
+    \caption{Distribution of Walking Duration}
+    \label{fig:4}
+    \centering
+    \fbox{\includegraphics[width=1\linewidth]{fig4}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[htp]
+    \caption{Prediction Process in Random Forests Model}
+    \label{fig:5}
+    \centering
+    \fbox{\includegraphics[width=1\linewidth]{fig5}}
+\end{figure}
+\efloatseparator
+ 
+\begin{figure}[htp]
+    \caption{Trend Line of Prediction and Test Set}
+    \label{fig:6}
+    \centering
+    \includegraphics[width=0.7\linewidth]{fig6-1}\\
+    \includegraphics[width=0.7\linewidth]{fig6-2}\\
+    \includegraphics[width=0.7\linewidth]{fig6-3}\\
+\end{figure}
+\efloatseparator
+ 
