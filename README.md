@@ -1,6 +1,14 @@
 # Source data of the paper for journal
 
-## Version: 1.1 Lite
+## Version: 2.0
+
+## Log
+    Version: 2.0
+    Date: 2018-04-09
+        Edited during the day on 9th April 2018.
+        1. Changed the expression of "acceptability"
+        2. Deleted fig.5
+        3. Integrated the hypothesis
 
 ## Log
     Version: 1.1 Lite
