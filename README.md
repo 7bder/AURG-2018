@@ -10,7 +10,6 @@
         2. Deleted fig.5
         3. Integrated the hypothesis
 
-## Log
     Version: 1.1 Lite
     Date: 2018-03-09
         Edited in the midnight on 8th March 2018.
