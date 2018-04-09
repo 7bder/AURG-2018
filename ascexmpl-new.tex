@@ -21,7 +21,7 @@
 \usepackage[colorlinks=true,citecolor=red,linkcolor=black]{hyperref}
 %
 % Please add the first author's last name here for the footer:
-\NameTag{Chen, \today}
+\NameTag{Chen Qi, \today}
 % Note that this is not displayed if the NoPageNumbers option is used
 % in the documentclass declaration.
 %
@@ -39,7 +39,7 @@
 
 % Please include an abstract:
 \begin{abstract}
-Real walking durations to transit stations can be viewed as the reflection of distance between departures and transit stations rather than the willingness or acceptability of walking durations for passengers. Therefore, the simple linear relationship between the walking duration and individual characteristics may not exist. This study examines the features of passengers' individual characteristics below/above some specific thresholds of walking duration to mine the information hidden in the survey data thus trying to explain this relationship. The dataset in this study is the survey of rail transit trip in Fukuoka, Japan, including 4254 records. The features are estimated by using the random forests model. The result is, trip purposes have the most significant effect at any threshold of walking duration, the feature of peak hour also shows importance; the other features have different performance at different thresholds. The result shows a clear relationship between real walking durations and passengers' individual characteristics. This relationship can be viewed as a reflection of the acceptability for walking durations to transit stations, also it is expected to provide references for planning the catchment area of transit stations or estimating the catchment area of existing transit stations.
+It is widely accepted that walking durations from departures to transit stations should relate to passengers' individual characteristics. However, since the walking duration is the reflection of the distribution of departure points, maybe it has no simple linear relationship with individual characteristics. Instead of examining the relationship between walking durations and individual characteristics directly, this study examines the feature distribution of individual characteristics over/under several thresholds of walking duration, thus trying to explore this relationship. The rail transit trip survey of Fukuoka, Japan is used as the dataset in this study which includes 4254 records. The features are estimated by using the random forests model. As a result, trip purposes have the most significant effect at any threshold of walking duration; the feature of peak hour also shows importance; the other features have different performance at different thresholds. The result shows a clear relationship between real walking durations and passengers' individual characteristics. Also, this result is expected to provide references for planning the catchment area of transit stations or estimating the catchment area of existing transit stations.
 \end{abstract}
 
 %
@@ -73,11 +73,13 @@ The study case of Fukuoka, is the sixth largest city in Japan which has the larg
 \subsection{Necessary hypothesis}
 Based on the ideas outlined above, this study proposes the following three necessary assumption.
 
-H1: The distribution of departures and destinations for people with different individual characteristics in Fukuoka, Japan has no significant features in spatial distribution. 
+\begin{itemize}
+\item H1: The distribution of departures and destinations for people with different individual characteristics in Fukuoka, Japan has no significant features in spatial distribution. 
 
-H2: The maximum acceptable walking duration of passengers with same individual characteristics should subject to the normal distribution. 
+\item H2: The maximum acceptable walking duration of passengers with same individual characteristics should subject to the normal distribution. 
 
-H3: The respondents are viewed as they can accept the walking duration that they answered.
+\item H3: The respondents are viewed as they can accept the walking duration that they answered.
+\end{itemize}
 
 Based on H1 and H2, if examining the threshold of walking duration $t$, set the proportion of $k$ group in the whole surveyed sample as $r_k$, the proportion of people whose walking durations are less than the given threshold of $t$ minutes is marked as $r_{k}^{<t}$, the proportion of people whose walking durations are more than the given threshold of $t$ minutes is marked as $r_{k}^{>t}$. Now considering if individual characteristics have no significant correlation with maximum acceptable walking durations, there should be no significant differences among $r_k$, $r_{k}^{<t}$, and $r_{k}^{>t}$; otherwise, the three proportion should show significant differences, and the differences will show regular changes at different threshold $t$.
 
@@ -142,11 +144,11 @@ For the threshold of 5 minutes, the features of trip purposes and peak hour play
 
 %
 \section{Estimation of features}
-The valid features (Table \ref{table:3}) are used in the random forest model to estimate the probability of walking longer than the given threshold of walking duration in terms of people with different characteristics. For estimating the model, the dataset is divided into two parts, 50\% of the samples are used for fitting the model and obtaining the coefficients, the rest 50\% are used for testing the ability of prediction. The probabilities of walking less than the given threshold of walking duration can be estimated by the decision tree obtained by the random forest model, the prediction process based on the decision tree from the random forest model is presented in Figure \ref{fig:6}. The prediction in random forest model is not obtained from the only one decision tree but the multitude of decision trees constructed by random selection of features and samples. Finally, the dependent variable at the given threshold of walking duration to transit stations is calculated by equation \ref{eq:1} based on the mean prediction.
+The valid features (Table \ref{table:3}) are used in the random forest model to estimate the probability of walking longer than the given threshold of walking duration in terms of people with different characteristics. For estimating the model, the dataset is divided into two parts, 50\% of the samples are used for fitting the model and obtaining the coefficients, the rest 50\% are used for testing the ability of prediction. The probabilities of walking less than the given threshold of walking duration can be estimated by the decision tree obtained by the random forest model, the prediction process based on the decision tree from the random forest model is presented in Figure \ref{fig:5}. The prediction in random forest model is not obtained from the only one decision tree but the multitude of decision trees constructed by random selection of features and samples. Finally, the dependent variable at the given threshold of walking duration to transit stations is calculated by equation \ref{eq:1} based on the mean prediction.
 
 %
-The accuracy of results are evaluated by using the method of simple moving average. Figure \ref{fig:7} is the trend line of probabilities of walking less than the given threshold. 
-The trend line of the surveyed values based on the test set is calculated by the mean probability of a group people who have close predicted values. The trend line is drawn by a descending order of predicted values. From the comparison of predicted values and surveyed values, it can be known that the prediction at the threshold of 5 minutes has the best fitness, and the prediction for the threshold of 13 minutes is also slightly good, while it’s not so good in the case of 8 minutes. In fact, if checking the prediction for individuals, the accuracy of this model is still not enough to explain the individual behavior. But trend line shown in Figure \ref{fig:7} partly proved that this result can be used for reflecting the behavior of a group of people at a given threshold of walking duration. Here the discrepancy occured between the surveyed data and realities, but in this study
+The accuracy of results are evaluated by using the method of simple moving average. Figure \ref{fig:6} is the trend line of probabilities of walking less than the given threshold. 
+The trend line of the surveyed values based on the test set is calculated by the mean probability of a group people who have close predicted values. The trend line is drawn by a descending order of predicted values. From the comparison of predicted values and surveyed values, it can be known that the prediction at the threshold of 5 minutes has the best fitness, and the prediction for the threshold of 13 minutes is also slightly good, while it’s not so good in the case of 8 minutes. In fact, if checking the prediction for individuals, the accuracy of this model is still not enough to explain the individual behavior. But trend line shown in Figure \ref{fig:6} partly proved that this result can be used for reflecting the behavior of a group of people at a given threshold of walking duration. Here the discrepancy occured between the surveyed data and realities, but in this study
 
 %
 \section{Discussion and Conclusion}
