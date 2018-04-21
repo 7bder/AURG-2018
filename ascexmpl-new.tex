@@ -30,16 +30,18 @@
 \title{Relationships between individual characteristics and real walking durations from departures to transit stations}
 %
 \author[1]{Qi Chen}
-\author[2]{Shichen Zhao}
+\author[2]{Siting Chen}
+\author[3]{Shichen Zhao}
 %
 \affil[1]{Doctor Candidate, Graduate School of Human-Environment Studies, Kyushu University, Japan}
+\affil[2]{Graduate Student, Graduate School of Human-Environment Studies, Kyushu University, Japan}
 \affil[2]{Professor, Dr. Eng. Faculty of Human-Environment Studies, Kyushu University, Japan}
 %
 \maketitle
 
 % Please include an abstract:
 \begin{abstract}
-It is widely accepted that walking durations from departures to transit stations should relate to passengers' individual characteristics. However, since the walking duration is the reflection of the distribution of departure points, maybe it has no simple linear relationship with individual characteristics. Instead of examining the relationship between walking durations and individual characteristics directly, this study examines the feature distribution of individual characteristics over/under several thresholds of walking duration, thus trying to explore this relationship. The rail transit trip survey of Fukuoka, Japan is used as the dataset in this study which includes 4254 records. The features are estimated by using the random forests model. As a result, trip purposes have the most significant effect at any threshold of walking duration; the feature of peak hour also shows importance; the other features have different performance at different thresholds. The result shows a clear relationship between real walking durations and passengers' individual characteristics. Also, this result is expected to provide references for planning the catchment area of transit stations or estimating the catchment area of existing transit stations.
+It is widely accepted that walking durations from departures to transit stations should relate to passengers' individual characteristics. However, since the walking duration is the reflection of the distribution of departure points, it may have no simple linear relationship with individual characteristics. Instead of examining the relationship between walking durations and individual characteristics directly, this study examines the feature distribution of individual characteristics over/under several thresholds of walking duration, thus trying to explore this relationship. The dataset used in this study is extracted from the person trip survey including 4254 records. The feature distribution is estimated by using the method of random decision forests. The result can be viewed as a reflection of the willingness using public transit at particular thresholds of walking duration for passengers with different individual characteristics. It is readily used to provide references for planning the catchment area of transit stations or estimating the catchment area of existing transit stations.
 \end{abstract}
 
 %
@@ -265,7 +267,7 @@ P\_going home 			& L & P\_ going home 		& L &       				&   \\
     \begin{description}
         \label{note:1}
         \item[*Note:]
-L means the individual with this feature tend to spend less time than the given threshold of walking duration on accessing transit stations, while M is the opposite meaning.
+L means the individual with this feature tend to walk longer than the given threshold of walking duration, while M is the opposite meaning.
         \end{description}
 \end{table}
 
